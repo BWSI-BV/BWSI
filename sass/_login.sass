@@ -1,0 +1,191 @@
+$background-login__window: linear-gradient(180deg, #5e5e5e 0%, #414141 33%, #181818 100%)
+$background-choice__button: linear-gradient(180deg, rgba(251,208,127,1) 0%, rgba(160,77,31,1) 100%)
+$background-choice__button-active: linear-gradient(180deg, rgba(253,225,172,1) 0%, rgba(175,110,11,1) 100%)
+$background-choice__text: linear-gradient(180deg, rgba(216,215,215,1) 0%, rgba(16,16,16,1) 66%, rgba(0,0,0,1) 100%)
+$background-choice__text-active: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 56%, rgba(112,112,112,1) 100%)
+$background-input: linear-gradient(90deg, rgba(106,106,106,1) 0%, rgba(111,111,111,1) 44%, rgba(178,178,178,1) 100%)
+$background-button: linear-gradient(180deg, rgba(249,211,153,1) 0%, rgba(175,110,11,1) 100%)
+
+
+.body-login
+    background: url(../img/main-banner.png) no-repeat
+    background-size: cover
+
+.login
+    &-remember__me
+        font-size: 20px
+        font-weight: 600
+    &-choice
+        display: flex
+        justify-content: space-between
+        &__button
+            width: 330px
+            height: 93px
+            background: $background-choice__button
+            border: none
+            border-radius: 70px 0px 0px 0px
+            &:last-child
+                border-radius: 0px 70px 0px 0px
+            @media (hover: hover)
+                &:hover
+                    box-shadow: 9px 8px 8px 0px rgba(0, 0, 0, 0.2)
+                    z-index: 10
+                    &:last-child
+                        box-shadow: -9px -8px 8px 0px rgba(0, 0, 0, 0.2)
+                @include hoverbig()
+            span
+                font-weight: 600
+                font-size: 36px
+                background: $background-choice__text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+            &-active
+                background: $background-choice__button-active
+                span
+                    background: $background-choice__text-active
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+    &-window
+        opacity: 0.9
+        width: 660px
+        background: $background-login__window
+        border-radius: 70px
+        @media (hover: hover)
+            &:hover
+                box-shadow: -9px -8px 8px 0px rgba(0, 0, 0, 0.2)
+
+    &-form
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        padding-top: 41px
+        padding-left: 49px
+        &__auth
+            display: block
+            @media (max-width: 1024px)
+                .login-window
+                    transform: scale(0.8)
+            @media (max-width: 768px)
+                .login-window
+                    transform: scale(0.6)
+            @media (max-width: 425px)
+                .login-window
+                    transform: scale(0.5)
+            @media (max-width: 375px)
+                .login-window
+                    transform: scale(0.4)
+            @media (max-width:320px)
+                .login-window
+                    transform: scale(0.35)
+        &__register
+            display: none
+            @media (max-width: 1024px)
+                .login-window
+                    transform: scale(0.8)
+            @media (max-width: 768px)
+                .login-window
+                    transform: scale(0.6)
+            @media (max-width: 425px)
+                .login-window
+                    transform: scale(0.5)
+            @media (max-width: 375px)
+                .login-window
+                    transform: scale(0.4)
+            @media (max-width:320px)
+                .login-window
+                    transform: scale(0.35)
+        &__button
+            @media (hover: hover)
+                @include hoverbig()
+            margin-left: 204px 
+            width: 153px
+            height: 43px
+            border: none
+            border-radius: 50px
+            background: $background-button
+            font-weight: bold
+            margin-bottom: 30px
+            font-size: 18px
+        &__input
+            width: 560px
+            height: 74px
+            border-radius: 50px
+            padding-left: 46px
+            padding-right: 26px
+            border: 3px solid grey
+            background: $background-input
+            color: #C2C2C2
+            font-weight: 600
+            font-size: 20px
+            &::placeholder
+                color: #C2C2C2
+                font-weight: 600
+                font-size: 20px
+            &-checkbox
+                width: 24px
+                height: 24px
+                margin-right: 10px
+                cursor: pointer
+                accent-color: #C2C2C2
+            &-wrapper
+                width: 560px
+                margin-bottom: 30px
+                border-radius: 50px
+                position: relative
+                display: flex
+                align-items: center
+                @include hoverbig()
+                @media (hover: hover)
+                    &:hover
+                        box-shadow: -9px -8px 8px 0px rgba(0, 0, 0, 0.2)
+            &-img
+                position: absolute
+                top: 27px
+                left: 20px
+
+.main
+    &-login
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+@media (max-width: 2560px)
+    .login-window
+        transform: scale(0.8)
+@media (max-width: 1440px)
+    .login-window
+        transform: scale(0.8)
+@media (max-width: 1024px)
+    .login-window
+        transform: scale(0.8)
+@media (max-width: 768px)
+    .login-window
+        transform: scale(0.6)
+@media (max-width: 425px)
+    .login-window
+        transform: scale(0.5)
+@media (max-width: 375px)
+    .login-window
+        transform: scale(0.4)
+@media (max-width:320px)
+    .login-window
+        transform: scale(0.35)
+
+
+@media (max-width: 1024px) and (orientation: landscape)
+    .login-window
+        transform: scale(0.4)
+@media (max-width: 768px) and (orientation: landscape)
+    .login-window
+        transform: scale(0.3)
+@media (max-width: 425px) and (orientation: landscape)
+    .login-window
+        transform: scale(0.2)
+@media (max-width: 375px) and (orientation: landscape)
+    .login-window
+        transform: scale(0.15)
+@media (max-width:320px) and (orientation: landscape)
+    .login-window
+        transform: scale(0.2)

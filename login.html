@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/icon/logo.svg" type="image/png">
+    <title>БВСИ</title>
+</head>
+<body class="body-login">
+
+    <main class="main-login">
+        <section class="login-window">
+            <div class="login-choice">
+                <button onclick="authClick()" id="auth-button" class="login-choice__button login-choice__button-active"><span>Вход</span></button>
+                <button onclick="registerClick()" id="register-button" class="login-choice__button"><span>Регистрация</span></button>
+            </div>
+            <form id="login-form__auth" class="login-form login-form__auth">
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/phone.svg" alt="Телефон">
+                    <input class="login-form__input" type="tel" placeholder="Номер телефона">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/lock.svg" alt="Замок">
+                    <input class="login-form__input" type="password" placeholder="Пароль">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <input class="login-form__input-checkbox" type="checkbox">
+                    <span class="login-remember__me">Запомнить меня</span>
+                </div>
+                <button type="submit" class="login-form__button">Войти</button>
+            </form>
+            <form id="login-form__register" class="login-form login-form__register">
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/men.svg" alt="ФИО">
+                    <input class="login-form__input" type="text" placeholder="ФИО">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/phone.svg" alt="Телефон">
+                    <input class="login-form__input" type="tel" placeholder="Номер телефона">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/mail.svg" alt="Почта">
+                    <input class="login-form__input" type="email" placeholder="Почта">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/lock.svg" alt="Пароль">
+                    <input class="login-form__input" type="password" placeholder="Пароль">
+                </div>
+                <div class="login-form__input-wrapper">
+                    <img class="login-form__input-img" src="icon/login/lock.svg" alt="Подтвердить пароль">
+                    <input class="login-form__input" type="password" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="login-form__button">Регистрация</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/jquey-min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
